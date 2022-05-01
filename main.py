@@ -79,6 +79,9 @@ def trucChelou (letter):
     pathName = "./images/Letter/letter"+ letter +".png"
     canvas_firstletter.create_image(coord2[0], coord2[1], image=tk.PhotoImage(file=pathName))
 
+    print(pathName)
+
+
     del coord2[0]
     print(coord2)
     del coord2[0]
