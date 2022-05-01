@@ -38,32 +38,8 @@ photoredcross = tk.PhotoImage(file="./images/redcross.png")
 smaller_imageredcross = photoredcross.subsample(10, 10)
 Spotify = tk.PhotoImage(file="./images/Spotify_App_Logo.png")
 smaller_imageSpotify = Spotify.subsample(10, 10)
-LetterA = tk.PhotoImage(file="./images/Letter/letterA.png")
-LetterB = tk.PhotoImage(file="./images/Letter/letterB.png")
-LetterC = tk.PhotoImage(file="./images/Letter/letterC.png")
-LetterD = tk.PhotoImage(file="./images/Letter/letterD.png")
-LetterE = tk.PhotoImage(file="./images/Letter/letterE.png")
-LetterF = tk.PhotoImage(file="./images/Letter/letterF.png")
-LetterG = tk.PhotoImage(file="./images/Letter/letterG.png")
-LetterH = tk.PhotoImage(file="./images/Letter/letterH.png")
-LetterI = tk.PhotoImage(file="./images/Letter/letterI.png")
-LetterJ = tk.PhotoImage(file="./images/Letter/letterJ.png")
-LetterK = tk.PhotoImage(file="./images/Letter/letterK.png")
-LetterL = tk.PhotoImage(file="./images/Letter/letterL.png")
-LetterM = tk.PhotoImage(file="./images/Letter/letterM.png")
-LetterN = tk.PhotoImage(file="./images/Letter/letterN.png")
-LetterO = tk.PhotoImage(file="./images/Letter/letterO.png")
-LetterP = tk.PhotoImage(file="./images/Letter/letterP.png")
-LetterQ = tk.PhotoImage(file="./images/Letter/letterQ.png")
-LetterR = tk.PhotoImage(file="./images/Letter/letterR.png")
-LetterS = tk.PhotoImage(file="./images/Letter/letterS.png")
-LetterT = tk.PhotoImage(file="./images/Letter/letterT.png")
-LetterU = tk.PhotoImage(file="./images/Letter/letterU.png")
-LetterV = tk.PhotoImage(file="./images/Letter/letterV.png")
-LetterW = tk.PhotoImage(file="./images/Letter/letterW.png")
-LetterX = tk.PhotoImage(file="./images/Letter/letterX.png")
-LetterY = tk.PhotoImage(file="./images/Letter/letterY.png")
-LetterZ = tk.PhotoImage(file="./images/Letter/letterZ.png")
+
+
 
 # FONT
 print("Adding CustomFont . . .")
@@ -90,200 +66,39 @@ canvas_firstletter.pack(anchor=tk.CENTER)
 canvas_firstletter.place(x=rootwidth // 2, y=rootheight // 2, anchor=tk.CENTER)
 canvas_firstletter['background'] = '#c9c9c9'
 #
-'''
-
-CECI ETAIT LORS DES TESTS. PEUT ETRE DELETE.
-
-# CanvasCreate
-canvas_firstletter.create_rectangle(200, 0, 400, 200, fill='black')
-canvas_firstletter.create_rectangle(400, 0, 600, 200, fill='red')
-canvas_firstletter.create_rectangle(600, 0, 800, 200, fill='yellow')
-canvas_firstletter.create_rectangle(800, 0, 1000, 200, fill='green')
-canvas_firstletter.create_rectangle(1000, 0, 1200, 200, fill='blue')
-canvas_firstletter.create_rectangle(1200, 0, 1400, 200, fill='brown')
-canvas_firstletter.create_rectangle(1400, 0, 1600, 200, fill='black')
-canvas_firstletter.create_rectangle(1600, 0, 1800, 200, fill='cyan')
-canvas_firstletter.create_rectangle(400, 200, 600, 400, fill='pink')
-canvas_firstletter.create_rectangle(600, 200, 800, 400, fill='green')
-canvas_firstletter.create_rectangle(800, 200, 1000, 400, fill='maroon')
-canvas_firstletter.create_rectangle(1000, 200, 1400, 400, fill='green')
-canvas_firstletter.create_rectangle(1200, 200, 1400, 400, fill='orange')
-canvas_firstletter.create_rectangle(1400, 200, 1600, 400, fill='navyblue')
-canvas_firstletter.create_rectangle(600, 400, 800, 600, fill='brown')
-canvas_firstletter.create_rectangle(800, 400, 1000, 600, fill='orange')
-canvas_firstletter.create_rectangle(1000, 400, 1200, 600, fill='red')
-canvas_firstletter.create_rectangle(1200, 400, 1400, 600, fill='blue')
-'''
 
 
 '''
 Dans la phrase, chaque lettre corresponds à un image. La phrase change et les lettres sont pas au meme emplacement...
 '''
-for letter in PDJ:
-    print(letter)
 
-    if letter == "A" or letter == "a":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterA)
-        canvas_firstletter['background'] = '#c9c9c9'
+
+def trucChelou (letter):
+
+
+    pathName = "./images/Letter/letter"+ letter +".png"
+    canvas_firstletter.create_image(coord2[0], coord2[1], image=tk.PhotoImage(file=pathName))
+
+    del coord2[0]
+    print(coord2)
+    del coord2[0]
+    print(coord2)
+
+
+for letter in PDJ:
+    if letter.isupper() :
+        trucChelou(letter)
+
+    elif letter.islower() :
+        x = letter.upper()
+        trucChelou(x)
+
+    elif letter.isspace() :
         del coord2[0]
         print(coord2)
         del coord2[0]
         print(coord2)
-    elif letter == "B" or letter == "b":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterB)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "C" or letter == "c":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterC)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "D" or letter == "d":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterD)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "E" or letter == "e":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterE)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "F" or letter == "f":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterF)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "G" or letter == "g":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterG)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "H" or letter == "h":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterH)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "I" or letter == "i":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterI)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "J" or letter == "j":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterJ)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "K" or letter == "k":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterK)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "L" or letter == "l":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterL)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "M" or letter == "m":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterM)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "N" or letter == "n":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterN)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "O" or letter == "o":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterO)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "P" or letter == "p":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterP)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "Q" or letter == "q":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterQ)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "R" or letter == "r":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterR)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "S" or letter == "s":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterS)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "T" or letter == "t":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterT)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "U" or letter == "u":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterU)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "V" or letter == "v":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterV)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "W" or letter == "w":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterW)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "X" or letter == "x":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterX)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "Y" or letter == "y":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterY)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == "Z" or letter == "z":
-        canvas_firstletter.create_image(coord2[0], coord2[1], image=LetterZ)
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
-    elif letter == " ":
-        del coord2[0]
-        print(coord2)
-        del coord2[0]
-        print(coord2)
+
     else:
         print("Root")
 
