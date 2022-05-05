@@ -20,7 +20,6 @@ customfont.font.add_file("./custfont/Papernotes.otf")  # Ajout de la police cust
 photoredcross = tk.PhotoImage(file="./images/redcross.png")
 smaller_imageredcross = photoredcross.subsample(10, 10)
 
-tk.Button(root, image=smaller_imageredcross, command=root.destroy).pack(anchor=tk.NE)  # Bouton pour quitter
 
 # FirstLetter
 canvas_firstletter = tk.Canvas(root, width=rootwidth, height=rootheight)
@@ -3407,5 +3406,6 @@ if nbl == 18:
 
         else:
             print("Root")
+tk.Button(root, image=smaller_imageredcross, command=root.destroy).pack(ipadx=1, ipady=1, anchor=tk.NE)  # Bouton pour quitter
 
 root.mainloop()
