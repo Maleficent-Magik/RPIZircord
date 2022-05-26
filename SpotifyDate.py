@@ -84,32 +84,26 @@ for i in range(1):
     elif hours[0] == 9:
         canvas_firstletter.create_image(150, 200, image=number9)
 
-for i in range(1):
-
     if hours[1] == 0:
-        canvas_firstletter.create_image(300, 200, image=number0)
+        canvas_firstletter.create_image(250, 200, image=number0)
     elif hours[1] == 1:
-        canvas_firstletter.create_image(300, 200, image=number1)
+        canvas_firstletter.create_image(250, 200, image=number1)
     elif hours[1] == 2:
-        canvas_firstletter.create_image(300, 200, image=number2)
+        canvas_firstletter.create_image(250, 200, image=number2)
     elif hours[1] == 3:
-        canvas_firstletter.create_image(300, 200, image=number3)
+        canvas_firstletter.create_image(250, 200, image=number3)
     elif hours[1] == 4:
-        canvas_firstletter.create_image(300, 200, image=number4)
+        canvas_firstletter.create_image(250, 200, image=number4)
     elif hours[1] == 5:
-        canvas_firstletter.create_image(300, 200, image=number5)
+        canvas_firstletter.create_image(250, 200, image=number5)
     elif hours[1] == 6:
-        canvas_firstletter.create_image(300, 200, image=number6)
+        canvas_firstletter.create_image(250, 200, image=number6)
     elif hours[1] == 7:
-        canvas_firstletter.create_image(300, 200, image=number7)
+        canvas_firstletter.create_image(250, 200, image=number7)
     elif hours[1] == 8:
-        canvas_firstletter.create_image(300, 200, image=number8)
+        canvas_firstletter.create_image(250, 200, image=number8)
     elif hours[1] == 9:
-        canvas_firstletter.create_image(300, 200, image=number9)
-
-canvas_firstletter.create_image(450, 200, image=deuxpoints)
-
-for i in range(1):
+        canvas_firstletter.create_image(250, 200, image=number9)
 
     if hours[2] == 0:
         canvas_firstletter.create_image(600, 200, image=number0)
@@ -132,7 +126,6 @@ for i in range(1):
     elif hours[2] == 9:
         canvas_firstletter.create_image(600, 200, image=number9)
 
-for i in range(1):
     if hours[3] == 0:
         canvas_firstletter.create_image(700, 200, image=number0)
     elif hours[3] == 1:
@@ -153,6 +146,8 @@ for i in range(1):
         canvas_firstletter.create_image(700, 200, image=number8)
     elif hours[3] == 9:
         canvas_firstletter.create_image(700, 200, image=number9)
+
+canvas_firstletter.create_image(420, 200, image=deuxpoints)
 
 
 def clock():
@@ -188,27 +183,27 @@ def clock():
         canvas_firstletter.create_image(300, 200, image=void)
 
         if hours[1] == 0:
-            canvas_firstletter.create_image(300, 200, image=number0)
+            canvas_firstletter.create_image(250, 200, image=number0)
         elif hours[1] == 1:
-            canvas_firstletter.create_image(300, 200, image=number1)
+            canvas_firstletter.create_image(250, 200, image=number1)
         elif hours[1] == 2:
-            canvas_firstletter.create_image(300, 200, image=number2)
+            canvas_firstletter.create_image(250, 200, image=number2)
         elif hours[1] == 3:
-            canvas_firstletter.create_image(300, 200, image=number3)
+            canvas_firstletter.create_image(250, 200, image=number3)
         elif hours[1] == 4:
-            canvas_firstletter.create_image(300, 200, image=number4)
+            canvas_firstletter.create_image(250, 200, image=number4)
         elif hours[1] == 5:
-            canvas_firstletter.create_image(300, 200, image=number5)
+            canvas_firstletter.create_image(250, 200, image=number5)
         elif hours[1] == 6:
-            canvas_firstletter.create_image(300, 200, image=number6)
+            canvas_firstletter.create_image(250, 200, image=number6)
         elif hours[1] == 7:
-            canvas_firstletter.create_image(300, 200, image=number7)
+            canvas_firstletter.create_image(250, 200, image=number7)
         elif hours[1] == 8:
-            canvas_firstletter.create_image(300, 200, image=number8)
+            canvas_firstletter.create_image(250, 200, image=number8)
         elif hours[1] == 9:
-            canvas_firstletter.create_image(300, 200, image=number9)
+            canvas_firstletter.create_image(250, 200, image=number9)
 
-    canvas_firstletter.create_image(450, 200, image=deuxpoints)
+    canvas_firstletter.create_image(420, 200, image=deuxpoints)
 
     for i in hours:
         canvas_firstletter.create_image(600, 200, image=void)
@@ -236,30 +231,26 @@ def clock():
 
     for i in hours:
         canvas_firstletter.create_image(750, 200, image=void)
-
         if hours[3] == 0:
-            canvas_firstletter.create_image(750, 200, image=number0)
+            canvas_firstletter.create_image(700, 200, image=number0)
         elif hours[3] == 1:
-            canvas_firstletter.create_image(750, 200, image=number1)
+            canvas_firstletter.create_image(700, 200, image=number1)
         elif hours[3] == 2:
-            canvas_firstletter.create_image(750, 200, image=number2)
+            canvas_firstletter.create_image(700, 200, image=number2)
         elif hours[3] == 3:
-            canvas_firstletter.create_image(750, 200, image=number3)
+            canvas_firstletter.create_image(700, 200, image=number3)
         elif hours[3] == 4:
-
-            canvas_firstletter.create_image(750, 200, image=number4)
+            canvas_firstletter.create_image(700, 200, image=number4)
         elif hours[3] == 5:
-
-            canvas_firstletter.create_image(750, 200, image=number5)
+            canvas_firstletter.create_image(700, 200, image=number5)
         elif hours[3] == 6:
-
-            canvas_firstletter.create_image(750, 200, image=number6)
+            canvas_firstletter.create_image(700, 200, image=number6)
         elif hours[3] == 7:
-            canvas_firstletter.create_image(750, 200, image=number7)
+            canvas_firstletter.create_image(700, 200, image=number7)
         elif hours[3] == 8:
-            canvas_firstletter.create_image(750, 200, image=number8)
+            canvas_firstletter.create_image(700, 200, image=number8)
         elif hours[3] == 9:
-            canvas_firstletter.create_image(750, 200, image=number9)
+            canvas_firstletter.create_image(700, 200, image=number9)
 
     root.after(100, clock)
 
