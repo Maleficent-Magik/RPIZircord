@@ -15,6 +15,8 @@ print("width x height = %d x %d (in pixels)\n" % (rootwidth, rootheight))  # Pri
 
 
 # Images
+adminrightac = tk.PhotoImage(file="./images/admin_tools.png")
+smaller_adminrightac = adminrightac.subsample(10, 10)
 photoredcross = tk.PhotoImage(file="./images/redcross.png")
 smaller_imageredcross = photoredcross.subsample(10, 10)
 Spotify = tk.PhotoImage(file="./images/Spotify_App_Logo.png")
@@ -255,6 +257,7 @@ def clock():
     root.after(100, clock)
 
 
+
 # Spotify
 canvasSpotify = tk.Canvas(root, width=480, height=180)
 canvasSpotify.pack(anchor=tk.SW)
@@ -265,7 +268,11 @@ canvasSpotify.create_text(100, 180, text="test", fill="black", font=('Papernotes
 canvasSpotify.create_image(42, 130, image=smaller_imageSpotify)
 canvasSpotify['background'] = '#c9c9c9'
 
-tk.Button(root, image=smaller_imageredcross, command=root.destroy).pack(padx=1, pady=1,
+
+tk.Button(root, image=smaller_adminrightac, command=root.destroy).place(x=745, y=430)#.pack(padx=1, pady=400, anchor=tk.SE)
+
+tk.Button(root, image=smaller_imageredcross, command=root.destroy).pack(padx=1, pady=0,
                                                                         anchor=tk.NE)  # Bouton pour quitter
+
 clock()
 root.mainloop()
