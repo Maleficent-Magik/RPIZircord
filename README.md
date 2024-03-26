@@ -2,9 +2,10 @@
 
 # RPIZircord
 
-Projet personnel consistant à faire afficher le titre qui est en cours de lecture sur Spotify avec un API. Ainsi que le jour actuel et l'heure. Et affiche une phrase qu'aura près dit.
+--- This project needs a makeover. ---
 
-Les lettres utilisées : ![Sans titre](https://user-images.githubusercontent.com/57113628/167216437-5c085e1d-a3b7-4330-870e-696a5aeac9be.png) (Utilisation PS)
-Police : https://www.dafont.com/fr/papernotes.font (Usage NC) 
+A purely funny project, the aim is to display a sentence on a black background with letters in images via the Python system, as well as the title of a piece of music currently playing on Spotify via an API key.
 
-Aucun droit commercial dessus.
+The manual used is Papernotes.font
+
+For this use, all you need is Python and the image font files.
